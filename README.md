@@ -6,7 +6,13 @@ In your ~/.bashrc script:
 export MODULEPATH=/data/ngs/modules:$MODULEPATH
 ```
 
-Then, to submit the pipeline:
+To be able to use snakemake:
+
+```{sh}
+module load snakemake
+```
+
+To submit a snakemake job, change into the directory with the Snakefile and execute:
 
 ```{sh}
 qsub -l nodes=1:c16 submit.sh
